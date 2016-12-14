@@ -25,6 +25,8 @@ public class AlchemyOntology extends BeanOntology {
             add(Potion.class);
             add(SellHerb.class);
             add(SellPotion.class);
+            add(Offer.class);
+            add(GiveOffer.class);
         } catch (BeanOntologyException ex) {
             log.log(Level.SEVERE, null, ex);
         }

@@ -19,6 +19,7 @@ public class ReceivePotionBehaviour extends ReceiveResultBehaviour<Mage> {
     @Override
     protected void handleResult(Predicate predicate, AID participant) {
         if (predicate instanceof Result) {
+            System.out.println("Received potion!");
             System.out.println(((Result) predicate).getValue());
         } else {
             System.out.println("No result");

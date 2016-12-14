@@ -4,6 +4,7 @@ import jade.content.onto.basic.Action;
 import jade.core.AID;
 import pl.gda.pg.eti.kask.sa.alchemists.agents.Alchemist;
 import pl.gda.pg.eti.kask.sa.alchemists.behaviours.WaitingBehaviour;
+import pl.gda.pg.eti.kask.sa.alchemists.ontology.GiveOffer;
 import pl.gda.pg.eti.kask.sa.alchemists.ontology.SellPotion;
 
 /**
@@ -21,6 +22,9 @@ public class AlchemistBehaviour extends WaitingBehaviour<Alchemist>{
         if (action.getAction() instanceof SellPotion) {
             myAgent.addBehaviour(new SellPotionBehaviour(myAgent, (SellPotion) action.getAction(), conversationId, participant));
         }
+        if (action.getAction() instanceof GiveOffer) {
+            myAgent.addBehaviour(new GiveOfferBehaviour(myAgent, (GiveOffer) action.getAction(), conversationId, participant));
+        } 
     }
     
 }

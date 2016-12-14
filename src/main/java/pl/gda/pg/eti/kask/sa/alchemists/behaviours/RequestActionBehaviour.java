@@ -24,7 +24,7 @@ public abstract class RequestActionBehaviour<T extends AgentAction, E extends Ba
 
     protected final E myAgent;
     
-    private final AID participant;
+    protected final AID participant;
 
     private final T action;
 
